@@ -1,0 +1,990 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    color: rgb(245, 237, 227);
+    font-family: sans-serif;
+    text-decoration: none;
+}
+
+html{
+  scroll-behavior: smooth;
+}
+
+/* ======================NAV BAR STYLING START======================== */
+/* Existing CSS */
+.nav-bar-cover {
+  height: 150px;
+  width: 100%;  /* Changed to 100% for responsiveness */
+  background-color: #333;
+  position: fixed;
+  top: 0;
+  width: 100%;
+  padding: 10px 0;
+  z-index: 1000;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+#img-logo {
+  height: 85px;
+  width: 80px;
+  margin-left: 20px;
+}
+
+#nam-nav-h, #nam-nav-ameed {
+  font-size: 48px;
+  color: rgb(203, 165, 114);
+  margin-left: 10px;
+}
+
+#nam-nav-ameed {
+  color: aliceblue;
+  font-size: 42px;
+}
+
+.logo-name-nav {
+  display: flex;
+  align-items: center;
+}
+
+.nav-home-contact-us-cover {
+  display: flex;
+  justify-content: space-evenly;  /* Ensure even spacing between items */
+  align-items: center;
+  margin-right: 5px;
+  font-size: 22px;
+  width: 675px;
+  /* background-color: wheat; */
+}
+
+.nav-home-contact-us-cover a:hover {
+  color: rgb(203, 165, 114);
+  cursor: pointer;
+  color: #a57a29;
+  transition: 0.3s linear;
+}
+
+/* Responsive CSS */
+@media screen and (max-width: 940px) {
+  .nav-bar-cover {
+      flex-direction: column;
+      height: auto; /* Adjust height to fit content */
+      padding: 10px;
+  }
+
+  .logo-name-nav {
+      justify-content: center;
+      margin-bottom: 10px;
+  }
+
+  #img-logo {
+      height: 60px; /* Adjust logo size for smaller screens */
+      width: 60px;
+      margin-left: 0;
+  }
+
+  #nam-nav-h, #nam-nav-ameed {
+      font-size: 36px; /* Adjust font size for smaller screens */
+  }
+
+  #nam-nav-ameed {
+      font-size: 32px;
+  }
+
+  .nav-home-contact-us-cover {
+      flex-direction: column;
+      width: 100%;
+      align-items: center;
+      margin-right: 0;
+  }
+
+  .nav-home-contact-us-cover a {
+      margin: 5px 0;
+      font-size: 20px; /* Adjust font size for smaller screens */
+  }
+}
+
+
+
+
+
+
+
+/* ======================NAV BAR STYLING end======================== */
+
+
+
+
+/* =================================CONTENT SECTION START================================================== */
+
+.content-cover{
+  height: 700px;
+  width: 100%;
+  background-color: #333;
+}
+
+.content-text-div-cover{
+  height: 600px;
+  width: 655px;
+  /* background-color: #6f5e5e; */
+  
+}
+
+.h1-div-lg-fon{
+  font-size: 40px;
+}
+
+.para-content{
+  height: 156px;
+  width: 580px;
+  /* background-color: blue; */
+  font-size: 14px;
+  /* word-spacing: 1px; */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.para-content > p{
+  margin-left: 10px;
+}
+
+/* BUTTON CSS */
+:root {
+  --color: #8B4513; /* Set this value to any shade of brown you prefer */
+}
+
+.container {
+  /* width: 100%;
+  min-height: 100vh; */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 120px;
+  /* background: #7a6b04e4; */
+}
+
+.button {
+  position: relative;
+  padding: 16px 30px;
+  font-size: 1.5rem;
+  color: white;
+  border: 2px solid rgba(0, 0, 0, 0.5);
+  border-radius: 4px;
+  text-shadow: 0 0 15px var(--color);
+  text-decoration: none;
+  text-transform: uppercase;
+  letter-spacing: 0.1rem;
+  transition: 0.5s;
+  z-index: 1;
+}
+
+.button:hover {
+  color: #fff;
+  border: 2px solid rgba(0, 0, 0, 0);
+  box-shadow: 0 0 0px var(--color);
+}
+
+.button::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: var(--color);
+  z-index: -1;
+  transform: scale(0);
+  transition: 0.5s;
+}
+
+.button:hover::before {
+  transform: scale(1);
+  transition-delay: 0.5s;
+  box-shadow: 0 0 10px var(--color),
+    0 0 30px var(--color),
+    0 0 60px var(--color);
+}
+
+.button span {
+  position: absolute;
+  background: var(--color);
+  pointer-events: none;
+  border-radius: 2px;
+  box-shadow: 0 0 10px var(--color),
+    0 0 20px var(--color),
+    0 0 30px var(--color),
+    0 0 50px var(--color),
+    0 0 100px var(--color);
+  transition: 0.5s ease-in-out;
+  transition-delay: 0.25s;
+}
+
+.button:hover span {
+  opacity: 0;
+  transition-delay: 0s;
+}
+
+.button span:nth-child(1),
+.button span:nth-child(3) {
+  width: 40px;
+  height: 4px;
+}
+
+.button:hover span:nth-child(1),
+.button:hover span:nth-child(3) {
+  transform: translateX(0);
+}
+
+.button span:nth-child(2),
+.button span:nth-child(4) {
+  width: 4px;
+  height: 40px;
+}
+
+.button:hover span:nth-child(1),
+.button:hover span:nth-child(3) {
+  transform: translateY(0);
+}
+
+.button span:nth-child(1) {
+  top: calc(50% - 2px);
+  left: -50px;
+  transform-origin: left;
+}
+
+.button:hover span:nth-child(1) {
+  left: 50%;
+}
+
+.button span:nth-child(3) {
+  top: calc(50% - 2px);
+  right: -50px;
+  transform-origin: right;
+}
+
+.button:hover span:nth-child(3) {
+  right: 50%;
+}
+
+.button span:nth-child(2) {
+  left: calc(50% - 2px);
+  top: -50px;
+  transform-origin: top;
+}
+
+.button:hover span:nth-child(2) {
+  top: 50%;
+}
+
+.button span:nth-child(4) {
+  left: calc(50% - 2px);
+  bottom: -50px;
+  transform-origin: bottom;
+}
+
+.button:hover span:nth-child(4) {
+  bottom: 50%;
+}
+  
+/* RESPONSIVE CSS */
+
+/* @media screen and (max-width: 940px) {
+ .img-inside-div {
+    display: flex;
+    justify-content: center;
+}
+} */
+
+/* IMAGE SECTION CONTENT STYLING */
+
+.content-img-own{
+    height: 600px;
+    width: 480px;
+     /* background-color: bisque; */
+    float: right;
+    position: relative;
+    bottom: 645px; 
+}
+
+
+
+/* =================================CONTENT SECTION END================================================== */
+
+
+
+/* ----------------------------------ABOUT ME SECTION STYLING START-------------------------------------------- */
+
+ .about-section-cover{
+  height: 850px;
+  width: 100%;
+  background-color: #333;
+}
+
+
+.div-for-height-width-heading{
+  height: 200px;
+  width: 100%;
+   background-color: #333; 
+ }  
+
+#about-me-underline-one{
+  position: relative;
+  left: 45px;
+  top: 45px;
+}
+
+#about-me-underline-two{
+  position: relative;
+  left: 45px;
+  top: 55px;
+}
+
+
+.about-me-head-para{
+  height: 400px;
+  width: 100%;
+  background-color: #333;
+}
+
+.head-para{
+  font-size: 17px;
+}
+
+.para-about-me{
+  height: 155px;
+  width: 100%;
+  /* background-color: rgb(199, 199, 75);  */
+} 
+
+.para-about-me > p{
+  margin-left: 45px;
+  margin-top: 30px;
+  font-size: 20px;
+  word-spacing: 3px;
+}
+
+/* ABOUT ME COLUMN SECTION */ 
+
+.about-me-cloumn{ 
+  height: 350px;
+  width: 511px;
+  background-color: #333;
+}
+
+.about-me-cloumn > h3{
+  margin-left: 65px;
+  margin-top: 90px;
+}
+
+.about-me-cloumn > h4{
+  margin-left: 65px;
+  margin-top: -8px;
+}
+
+
+
+
+
+
+
+/* ----------------------------------ABOUT ME SECTION STYLING END--------------------------------------------- */
+
+ 
+/* <!-- =====================NOW SERVICES SECTION STYKING START================== --> */
+
+.service-section-cover {
+  height: 1100px;
+  width: 100%;
+  background-color: #333;
+}
+
+.box-cover {
+  height: 500px;
+  width: 100%;
+  background-color: aquamarine;
+}
+
+.box-one {
+  height: 370px;
+  width: 300px;
+  background-color: rgb(37, 34, 34);
+  transition: all 0.25s;
+  display: inline-block;
+}
+
+.box-one:hover {
+  background-color: #c0954cee;
+}
+
+.box-one:hover .circle-one {
+  background-color: black;
+}
+
+.box-one:hover .circle-one i {
+  color: #fff;
+  transition: all 0.65s; 
+  transform: rotateY(360deg);
+}
+
+.box-one:hover .title-one > h1,
+.box-one:hover .title-one > h2 {
+  color: #5c5c5c;
+}
+
+.circle-one {
+  height: 115px;
+  width: 117.5px;
+  border: 11.5px solid black;
+  border-radius: 50%;
+  background-color: rgb(203, 165, 114);
+  position: relative;
+  left: 75px;
+  top: 30px;
+  transition: all 0.25s;
+}
+
+#icon-box-one {
+  font-size: 80px;
+  color: #333;
+  position: relative;
+  left: 17px;
+  top: 10px;
+}
+
+.title-one {
+  position: relative;
+  left: 75px;
+  top: 45px;
+  transition: all 0.25s;
+}
+
+.para-one {
+  height: 125px;
+  width: 195px;
+  position: relative;
+  left: 55px;
+  top: 60px;
+  transition: all 0.25s;
+}
+
+.line-box-one {
+  height: 20px;
+  width: 300px;
+  background-color: #c29a54;
+  position: relative;
+  top: 73px;
+}
+
+/* BOX FIVE */
+
+#box-five {
+  position: relative;
+  top: 46px;
+  left: 75px;
+}
+
+.box-one:hover #icon-box-one {
+  color: #fff;
+}
+
+
+/* <!-- =====================NOW SERVICES SECTION END================== --> */
+
+
+
+/* !-- ===============SERVICE SECTION START STYLING=========== */
+
+.exprience-sec-cover{
+  height: 1250px;
+  width: 100%;
+  background-color: #333;
+}
+
+.exprience-container{
+  height: 1200px;
+  width: 520px;
+  /* background-color: aqua; */
+  margin-left: 35px;
+}
+
+.para-edu{
+  height: 200px;
+  width: 450px;
+  /* background- : #000000; */
+  margin-top: 146px;
+  margin-left: 45px;
+}
+
+.para-edu > p{
+  font-size: 16px;
+  word-spacing: 2px;
+}
+
+/* EDUCTSAION SECTION */
+
+.education-sec-cover{
+  height: 0px; 
+  width: 100%; 
+}  
+
+.education-container{
+  height: 800px;
+  width: 520px;
+  /* background-color: aqua; */
+  margin-left: 35px;
+  position: relative;
+  left: 625px;
+  bottom: 1250px;
+  
+}
+
+.para-exp{
+  height: 200px;
+  width: 450px;
+  background-color: #333;
+  margin-top: 146px;
+   margin-left: 45px; 
+ } 
+
+.para-exp > p{
+  font-size: 18px; 
+  word-spacing: 4px; 
+ } 
+
+
+/* !-- ===============SERVICE SECTION STYLING END=========== */
+
+
+/* -------===============PORTFOLIO SECTION STYLING START-------============ */
+
+.portfolio-cover{
+  height: 800px;
+  width: 100%;
+  background-color: #333;
+}
+
+/* .box-project-one{
+  height: 320px;
+  width: 375px;
+  background-color: #5c5c5c;
+  background-image: url("./amazon-clone.png");
+  background-size: cover;
+} */
+
+/* 5TH BOX STYLE */
+
+.box-project-five {
+  position: relative;
+  left: 310px;
+  height: 290px;
+  width: 335px;
+  overflow: hidden;
+  transition: transform 0.3s ease-in-out;
+}
+
+.box-project-five .image-container {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-image: url("./resturant.png");
+  background-size: cover;
+  background-position: center;
+  transition: filter 0.3s ease-in-out, transform 0.3s ease-in-out;
+}
+
+.box-project-five:hover .image-container {
+  filter: blur(5px);
+  transform: scale(1.1) translate(-5%, -5%);
+}
+
+.box-project-five .overlay {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 80%;
+  height: 80%;
+  background-color: rgba(0, 0, 0, 0.5); /* semi-transparent overlay */
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  opacity: 0;
+  transition: opacity 0.3s ease-in-out, transform 0.3s ease-in-out;
+  z-index: 1;
+}
+
+.box-project-five:hover .overlay {
+  opacity: 1;
+  transform: scale(1.1) translate(-50%, -50%);
+}
+
+.box-project-five .overlay-text {
+  color: white;
+  font-size: 24px;
+  text-align: center;
+}
+
+
+/* 1st PROJECT */
+
+.box-project-one {
+  position: relative;
+  height: 290px;
+  width: 335px;
+  overflow: hidden;
+  transition: transform 0.3s ease-in-out;
+}
+
+.box-project-one .image-container {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-image: url("./amazon-clone.png");
+  background-size: cover;
+  background-position: center;
+  transition: filter 0.3s ease-in-out, transform 0.3s ease-in-out;
+}
+
+.box-project-one:hover .image-container {
+  filter: blur(5px);
+  transform: scale(1.1) translate(-5%, -5%);
+}
+
+.box-project-one .overlay {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 80%;
+  height: 80%;
+  background-color: rgba(0, 0, 0, 0.5); /* semi-transparent overlay */
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  opacity: 0;
+  transition: opacity 0.3s ease-in-out, transform 0.3s ease-in-out;
+  z-index: 1;
+}
+
+.box-project-one:hover .overlay {
+  opacity: 1;
+  transform: scale(1.1) translate(-50%, -50%);
+}
+
+.box-project-one .overlay-text {
+  color: white;
+  font-size: 24px;
+  text-align: center;
+}
+
+/* 2nd box style */
+
+
+.box-project-two {
+  position: relative;
+  left: 96px;
+  height: 290px;
+  width: 335px;
+  overflow: hidden;
+  transition: transform 0.3s ease-in-out;
+}
+
+.box-project-two .image-container {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-image: url("./gym\ \(2\).png");
+  background-size: cover;
+  background-position: center;
+  transition: filter 0.3s ease-in-out, transform 0.3s ease-in-out;
+}
+
+.box-project-two:hover .image-container {
+  filter: blur(5px);
+  transform: scale(1.1) translate(-5%, -5%);
+}
+
+.box-project-two .overlay {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 80%;
+  height: 80%;
+  background-color: rgba(0, 0, 0, 0.5); /* semi-transparent overlay */
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  opacity: 0;
+  transition: opacity 0.3s ease-in-out, transform 0.3s ease-in-out;
+  z-index: 1;
+}
+
+.box-project-two:hover .overlay {
+  opacity: 1;
+  transform: scale(1.1) translate(-50%, -50%);
+}
+
+.box-project-two .overlay-text {
+  color: white;
+  font-size: 24px;
+  text-align: center;
+}
+
+/* BOX 3 STYLE */
+
+.box-project-thr {
+  position: relative;
+  left: 165px;
+  height: 290px;
+  width: 335px;
+  overflow: hidden;
+  transition: transform 0.3s ease-in-out;
+}
+
+.box-project-thr .image-container {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-image: url("./tourism.png");
+  background-size: cover;
+  background-position: center;
+  transition: filter 0.3s ease-in-out, transform 0.3s ease-in-out;
+}
+
+.box-project-thr:hover .image-container {
+  filter: blur(5px);
+  transform: scale(1.1) translate(-5%, -5%);
+}
+
+.box-project-thr .overlay {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 80%;
+  height: 80%;
+  background-color: rgba(0, 0, 0, 0.5); /* semi-transparent overlay */
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  opacity: 0;
+  transition: opacity 0.3s ease-in-out, transform 0.3s ease-in-out;
+  z-index: 1;
+}
+
+.box-project-thr:hover .overlay {
+  opacity: 1;
+  transform: scale(1.1) translate(-50%, -50%);
+}
+
+.box-project-thr .overlay-text {
+  color: white;
+  font-size: 24px;
+  text-align: center;
+}
+
+/* 4th style box */
+
+.box-project-four {
+  position: relative;
+  left: 193px;
+  height: 290px;
+  width: 335px;
+  overflow: hidden;
+  transition: transform 0.3s ease-in-out;
+}
+
+.box-project-four .image-container {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-image: url("./Screenshot\ 2024-06-08\ 165528.png");
+  background-size: cover;
+  background-position: center;
+  transition: filter 0.3s ease-in-out, transform 0.3s ease-in-out;
+}
+
+.box-project-four:hover .image-container {
+  filter: blur(5px);
+  transform: scale(1.1) translate(-5%, -5%);
+}
+
+.box-project-four .overlay {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 80%;
+  height: 80%;
+  background-color: rgba(0, 0, 0, 0.5); /* semi-transparent overlay */
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  opacity: 0;
+  transition: opacity 0.3s ease-in-out, transform 0.3s ease-in-out;
+  z-index: 1;
+}
+
+.box-project-four:hover .overlay {
+  opacity: 1;
+  transform: scale(1.1) translate(-50%, -50%);
+}
+
+.box-project-four .overlay-text {
+  color: white;
+  font-size: 24px;
+  text-align: center;
+} 
+/* -------===============PORTFOLIO SECTION STYLING END-------============ */
+
+
+/* ===========-----------CONTACT SECTION STTLING START=====---------- --> */
+
+.contact-cover{
+  height: 650px;
+  width: 100%;
+  background-color: #333;
+}
+
+.ask-question{
+  height: 200px;
+  width: 100%;
+  background-color: #333;
+  margin-top: 65px;
+}
+
+.head-two-question > h1{
+  color: #ba8056;
+  display: flex;
+  justify-content: center;
+  text-align: center;
+  position: relative;
+  top: 41px;
+}
+
+.head-two-question > h4{
+     display: flex;
+    justify-content: center;
+    text-align: center;
+    margin-top: 43px;
+}
+
+.icon-one{
+     display: flex;
+     justify-content: center;
+     text-align: center;
+     justify-content: space-evenly;
+     margin-top: 70px;
+}
+
+#social-media{
+  position: relative;
+  top: 25px;
+
+}
+
+/* ICONS STYLING */
+
+
+ 
+ul {
+  display: flex;
+  position: absolute;
+  top: 405%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
+ul li {
+  list-style: none;
+}
+
+ul li a {
+  width: 65px;
+  height: 65px;
+  background-color: #fff;
+  text-align: center;
+  line-height: 80px;
+  font-size: 35px;
+  margin: 0 10px;
+  display: block;
+  border-radius: 50%;
+  position: relative;
+  overflow: hidden;
+  border: 3px solid #fff;
+  z-index: 1;
+}
+
+ul li a .icon {
+  position: relative;
+  top: -10px;
+  color: #262626;
+  transition: .5s;
+  z-index: 3;
+}
+
+ul li a:hover .icon {
+  color: #fff;
+  transform: rotateY(360deg);
+}
+
+ul li a:before {
+  content: "";
+  position: absolute;
+  top: 100%;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  /* background: #f00; */
+  transition: .5s;
+  z-index: 2;
+}
+
+ul li a:hover:before {
+  top: 0;
+}
+
+ul li:nth-child(1) a:before{
+  background: #4563a6;
+}
+
+ul li:nth-child(2) a:before{
+  background: #0f4e7e;
+}
+
+ul li:nth-child(3) a:before {
+  background: #01111a;
+}
+
+/* ul li:nth-child(4) a:before {
+  background: #01111a;
+} */
+
+ul li:nth-child(4) a:hover {
+  background: linear-gradient(45deg, #ffdc80, #fcb045, red, #833ab4, #c13584, #405de6);
+}
+
+/* ===========-----------CONTACT SECTION CSTYLING END=====---------- --> */
+
+/* BUTTON CV STYLING */
+
+.button-cv{
+  height: 85px;
+  width: 100%;
+  background-color: #0f4e7e;
+}
