@@ -160,12 +160,12 @@ html{
   margin-left: 10px;
 }
 /* MEDIA QUEIREIS OF PARA CONTENT */
-  @media  screen and (max-width: 940px) {
+  /* @media  screen and (max-width: 940px) {
             .para-content > p{
               font-size: 10px;
             }
     
-  }
+  } */
 
 
 /* BUTTON CSS */
